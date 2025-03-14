@@ -5,6 +5,7 @@ import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'Motherbrain - SaaS Solutions for New Developments',  // Updated to reflect SaaS focus
@@ -29,9 +30,11 @@ export default function RootLayout({
       className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
     >
       <body className="min-h-[100dvh] bg-gray-50">
-        <UserProvider userPromise={userPromise}>{children}</UserProvider>
-        <Analytics />
-        <SpeedInsights />
+        <Providers>
+          <UserProvider userPromise={userPromise}>{children}</UserProvider>
+          <Analytics />
+          <SpeedInsights />
+        </Providers>
       </body>
     </html>
   );

@@ -1,46 +1,23 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { signToken, verifyToken } from '@/lib/auth/session';
-
-const protectedRoutes = '/dashboard';
+import { getToken } from 'next-auth/jwt';
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const sessionCookie = request.cookies.get('session');
-  const isProtectedRoute = pathname.startsWith(protectedRoutes);
 
-  if (isProtectedRoute && !sessionCookie) {
+  // Check if the request is for a protected route
+  const protectedRoutes = ['/dashboard'];
+  const isProtectedRoute = protectedRoutes.some(route => pathname.startsWith(route));
+
+  // Check if user is authenticated with NextAuth
+  const token = await getToken({ req: request });
+
+  // If it's a protected route and user is not authenticated, redirect to sign-in
+  if (isProtectedRoute && !token) {
     return NextResponse.redirect(new URL('/sign-in', request.url));
   }
 
-  let res = NextResponse.next();
-
-  if (sessionCookie && request.method === "GET") {
-    try {
-      const parsed = await verifyToken(sessionCookie.value);
-      const expiresInOneDay = new Date(Date.now() + 24 * 60 * 60 * 1000);
-
-      res.cookies.set({
-        name: 'session',
-        value: await signToken({
-          ...parsed,
-          expires: expiresInOneDay.toISOString(),
-        }),
-        httpOnly: true,
-        secure: true,
-        sameSite: 'lax',
-        expires: expiresInOneDay,
-      });
-    } catch (error) {
-      console.error('Error updating session:', error);
-      res.cookies.delete('session');
-      if (isProtectedRoute) {
-        return NextResponse.redirect(new URL('/sign-in', request.url));
-      }
-    }
-  }
-
-  return res;
+  return NextResponse.next();
 }
 
 export const config = {
