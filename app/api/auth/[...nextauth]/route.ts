@@ -28,6 +28,7 @@ export const authOptions = {
     error: "/sign-in?error=OAuthSignin",
   },
   secret: process.env.NEXTAUTH_SECRET,
+  debug: true, // Enable debug mode in development
 };
 
 const handler = NextAuth(authOptions);
