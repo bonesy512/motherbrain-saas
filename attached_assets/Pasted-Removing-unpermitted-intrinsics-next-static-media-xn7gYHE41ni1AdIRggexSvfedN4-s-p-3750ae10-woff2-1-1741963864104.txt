@@ -1,0 +1,96 @@
+Removing unpermitted intrinsics
+/_next/static/media/xn7gYHE41ni1AdIRggexSvfedN4-s.p.3750ae10.woff2:1 
+            
+            
+           GET https://9901dd6f-23e3-427e-86ee-f71deacb6c1e-00-1er73y29kgm71.worf.replit.dev/_next/static/media/xn7gYHE41ni1AdIRggexSvfedN4-s.p.3750ae10.woff2 net::ERR_ABORTED 403 (Forbidden)Understand this errorAI
+react-dom-client.development.js:27939 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+script.debug.js:1 [Vercel Web Analytics] Debug mode is enabled by default in development. No requests will be sent to the server.
+script.debug.js:1 [Vercel Web Analytics] Running queued event pageview {route: '/sign-in', path: '/sign-in'}
+script.debug.js:1 [Vercel Web Analytics] [pageview] https://9901dd6f-23e3-427e-86ee-f71deacb6c1e-00-1er73y29kgm71.worf.replit.dev/sign-in {o: 'https://9901dd6f-23e3-427e-86ee-f71deacb6c1e-00-1er73y29kgm71.worf.replit.dev/sign-in', sv: '0.1.3', sdkn: '@vercel/analytics/next', sdkv: '1.5.0', ts: 1741963821150, …}
+script.debug.js:1 [Vercel Speed Insights] Debug mode is enabled by default in development. No requests will be sent to the server.
+react-dom-client.development.js:27545 
+            
+            
+           GET https://9901dd6f-23e3-427e-86ee-f71deacb6c1e-00-1er73y29kgm71.worf.replit.dev/_next/static/media/xn7gYHE41ni1AdIRggexSvfedN4-s.p.3750ae10.woff2 net::ERR_ABORTED 403 (Forbidden)
+L @ react-dom-client.development.js:27545
+resolveHint @ react-server-dom-turbopack-client.browser.development.js:1894
+processFullStringRow @ react-server-dom-turbopack-client.browser.development.js:2422
+processFullBinaryRow @ react-server-dom-turbopack-client.browser.development.js:2414
+progress @ react-server-dom-turbopack-client.browser.development.js:2661
+Promise.then
+progress @ react-server-dom-turbopack-client.browser.development.js:2681
+Promise.then
+progress @ react-server-dom-turbopack-client.browser.development.js:2681
+Promise.then
+startReadingFromStream @ react-server-dom-turbopack-client.browser.development.js:2688
+exports.createFromReadableStream @ react-server-dom-turbopack-client.browser.development.js:2921
+[project]/node_modules/.pnpm/next@15.2.2-canary.3_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/app-index.js [app-client] (ecmascript) @ app-index.tsx:158
+(anonymous) @ dev-base.ts:205
+runModuleExecutionHooks @ dev-base.ts:265
+instantiateModule @ dev-base.ts:203
+getOrInstantiateModuleFromParent @ dev-base.ts:132
+commonJsRequire @ runtime-utils.ts:241
+(anonymous) @ app-next-turbopack.ts:9
+(anonymous) @ app-bootstrap.ts:78
+loadScriptsInSequence @ app-bootstrap.ts:20
+appBootstrap @ app-bootstrap.ts:60
+[project]/node_modules/.pnpm/next@15.2.2-canary.3_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/app-next-turbopack.js [app-client] (ecmascript) @ app-next-turbopack.ts:8
+(anonymous) @ dev-base.ts:205
+runModuleExecutionHooks @ dev-base.ts:265
+instantiateModule @ dev-base.ts:203
+getOrInstantiateRuntimeModule @ dev-base.ts:101
+registerChunk @ runtime-backend-dom.ts:85
+await in registerChunk
+registerChunk @ runtime-base.ts:329
+(anonymous) @ dev-backend-dom.ts:127
+(anonymous) @ dev-backend-dom.ts:127Understand this errorAI
+use-websocket.ts:16 WebSocket connection to 'wss://9901dd6f-23e3-427e-86ee-f71deacb6c1e-00-1er73y29kgm71.worf.replit.dev/_next/webpack-hmr' failed: 
+(anonymous) @ use-websocket.ts:16
+react-stack-bottom-frame @ react-dom-client.development.js:27008
+runWithFiberInDEV @ react-dom-client.development.js:1472
+commitHookEffectListMount @ react-dom-client.development.js:11122
+commitHookPassiveMountEffects @ react-dom-client.development.js:11209
+commitPassiveMountOnFiber @ react-dom-client.development.js:13813
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13805
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13832
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13805
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13805
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13805
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13805
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:14022
+recursivelyTraversePassiveMountEffects @ react-dom-client.development.js:13753
+commitPassiveMountOnFiber @ react-dom-client.development.js:13847
+flushPassiveEffects @ react-dom-client.development.js:18080
+flushPendingEffects @ react-dom-client.development.js:18029
+performSyncWorkOnRoot @ react-dom-client.development.js:18597
+flushSyncWorkAcrossRoots_impl @ react-dom-client.development.js:18442
+flushSpawnedWork @ react-dom-client.development.js:17785
+commitRoot @ react-dom-client.development.js:17472
+commitRootWhenReady @ react-dom-client.development.js:16540
+performWorkOnRoot @ react-dom-client.development.js:16439
+performWorkOnRootViaSchedulerTask @ react-dom-client.development.js:18585
+performWorkUntilDeadline @ scheduler.development.js:36Understand this errorAI
+/sign-in:1 The resource https://9901dd6f-23e3-427e-86ee-f71deacb6c1e-00-1er73y29kgm71.worf.replit.dev/_next/static/media/xn7gYHE41ni1AdIRggexSvfedN4-s.p.3750ae10.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
