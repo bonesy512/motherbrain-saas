@@ -29,6 +29,7 @@ export const authOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
   debug: true, // Enable debug mode in development
+  trustHost: true, // Important for Replit deployment
 };
 
 const handler = NextAuth(authOptions);
