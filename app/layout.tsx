@@ -5,10 +5,9 @@ import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
 
 export const metadata: Metadata = {
-  title: 'Next.js SaaS Starter',
-  description: 'Get started quickly with Next.js, Postgres, and Stripe.',
+  title: 'Motherbrain - SaaS Solutions for New Developments',  // Updated to reflect SaaS focus
+  description: 'Motherbrain provides innovative SaaS solutions for new developments, simplifying workflows and enhancing productivity.',
 };
-
 export const viewport: Viewport = {
   maximumScale: 1,
 };

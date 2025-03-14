@@ -31,3 +31,7 @@ args = "pnpm db:setup"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "pnpm db:migrate"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
