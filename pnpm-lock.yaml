@@ -71,6 +71,9 @@ importers:
       jose:
         specifier: ^6.0.8
         version: 6.0.8
+      lib:
+        specifier: link:@/lib
+        version: link:@/lib
       lucide-react:
         specifier: ^0.479.0
         version: 0.479.0(react@19.0.0)
