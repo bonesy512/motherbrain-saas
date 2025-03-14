@@ -28,8 +28,8 @@ export const authOptions = {
     error: "/sign-in?error=OAuthSignin",
   },
   secret: process.env.NEXTAUTH_SECRET,
-  debug: true, // Enable debug mode in development
-  trustHost: true, // Important for Replit deployment
+  debug: process.env.NODE_ENV === "development",
+  trustHost: true,
 };
 
 const handler = NextAuth(authOptions);
