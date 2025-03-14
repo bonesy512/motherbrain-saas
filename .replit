@@ -6,3 +6,28 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "pnpm install"]
+
+[workflows]
+runButton = "Dev"
+
+[[workflows.workflow]]
+name = "Dev"
+author = 12365034
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm dev"
+
+[[workflows.workflow]]
+name = "Setup DB"
+author = 12365034
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm db:setup"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm db:migrate"
