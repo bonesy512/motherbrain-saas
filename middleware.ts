@@ -1,7 +1,6 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { getToken } from 'next-auth/jwt';
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -10,14 +9,11 @@ export async function middleware(request: NextRequest) {
   const protectedRoutes = ['/dashboard'];
   const isProtectedRoute = protectedRoutes.some(route => pathname.startsWith(route));
 
-  // Check if user is authenticated with NextAuth
-  const token = await getToken({ 
-    req: request,
-    secret: process.env.NEXTAUTH_SECRET
-  });
-
+  // For now, we'll use a simple check via cookies instead of jwt token verification
+  const authCookie = request.cookies.get('next-auth.session-token');
+  
   // If it's a protected route and user is not authenticated, redirect to sign-in
-  if (isProtectedRoute && !token) {
+  if (isProtectedRoute && !authCookie) {
     return NextResponse.redirect(new URL('/sign-in', request.url));
   }
 

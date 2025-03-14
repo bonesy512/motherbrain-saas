@@ -11,13 +11,23 @@ export const authOptions = {
   ],
   callbacks: {
     async session({ session, token }: any) {
-      session.user.id = token.sub;
+      if (token) {
+        session.user.id = token.sub;
+      }
       return session;
+    },
+    async jwt({ token, user }: any) {
+      if (user) {
+        token.id = user.id;
+      }
+      return token;
     },
   },
   pages: {
     signIn: "/sign-in",
+    error: "/sign-in?error=OAuthSignin",
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);
